@@ -13,7 +13,7 @@ body {
 
 /* Section styles */
 section {
-    margin: 30px auto; /* Aumentar a margem */
+    margin: 5px auto; /* Margem de 5px */
     max-width: 1200px;
     padding: 30px; /* Aumentar o padding */
     background-color: #ffffff; /* Fundo branco */
@@ -103,9 +103,9 @@ input[type="text"], input[type="file"] {
 
 /* Search input styles */
 #searchInput {
-    width: 100%;
+    width: 40%; /* Diminuir a largura da barra de pesquisa */
     margin-bottom: 20px; /* Aumentar margem inferior */
-    padding: 15px; /* Aumentar padding do campo de busca */
+    padding: 10px; /* Ajustar padding do campo de busca */
     border: 1px solid #ced4da;
     border-radius: 10px; /* Bordas arredondadas */
     transition: border-color 0.3s;
@@ -121,5 +121,9 @@ input[type="text"], input[type="file"] {
 @media (max-width: 768px) {
     .table {
         font-size: 14px;
+    }
+
+    #searchInput {
+        width: 100%; /* Fazer a barra de pesquisa ocupar 100% em telas pequenas */
     }
 }
