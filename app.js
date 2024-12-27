@@ -6,13 +6,13 @@ var form = document.getElementById("myForm"),
     prateleira = document.getElementById("prateleira"),
     submitBtn = document.querySelector(".submit"),
     userInfo = document.getElementById("data"),
-    modal = document.getElementById("userForm"),
     modalTitle = document.querySelector("#userForm .modal-title"),
-    newUserBtn = document.querySelector(".newUser");
+    newUserBtn = document.querySelector(".newUser"),
+    searchInput = document.getElementById("searchInput");
 
 let getData = localStorage.getItem('userProfile') ? JSON.parse(localStorage.getItem('userProfile')) : [];
-
 let isEdit = false, editId;
+
 showInfo();
 
 newUserBtn.addEventListener('click', () => {
@@ -23,13 +23,12 @@ newUserBtn.addEventListener('click', () => {
     form.reset();
 });
 
-file.onchange = function() {
+file.onchange = function () {
     if (file.files[0].size < 1000000) { // 1MB = 1000000
         var fileReader = new FileReader();
 
-        fileReader.onload = function(e) {
-            imgUrl = e.target.result;
-            imgInput.src = imgUrl;
+        fileReader.onload = function (e) {
+            imgInput.src = e.target.result;
         }
 
         fileReader.readAsDataURL(file.files[0]);
@@ -111,9 +110,20 @@ form.addEventListener('submit', (e) => {
     showInfo();
 
     form.reset();
+    imgInput.src = "./image/Profile Icon.webp";  
+});
 
-    imgInput.src = "./image/Profile Icon.webp";
+// Função de pesquisa
+searchInput.addEventListener("input", function() {
+    const searchValue = searchInput.value.toLowerCase();
+    const rows = document.querySelectorAll(".employeeDetails");
 
-    // modal.style.display = "none"
-    // document.querySelector(".modal-backdrop").remove()
+    rows.forEach(row => {
+        const codigoCell = row.cells[2].textContent.toLowerCase(); // A coluna "Código" é a terceira
+        if (codigoCell.includes(searchValue)) {
+            row.style.display = ""; // Mostra a linha se o código corresponder
+        } else {
+            row.style.display = "none"; // Esconde a linha se não corresponder
+        }
+    });
 });
