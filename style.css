@@ -1,101 +1,119 @@
-table tr td{
-    vertical-align: middle;
-}
-
-td button{
-    margin: 5px;
-}
-
-td button i{
-    font-size: 20px;
-}
-
-
-.modal-header{
-    background: #0d6efd;
-    color: #fff;
-}
-
-.modal-body form {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+/* Reset some default styles */
+body, h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
     padding: 0;
 }
 
-.modal-body form .imgholder{
-    width: 200px;
-    height: 200px;
-    position: relative;
-    border-radius: 20px;
-    overflow: hidden;
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
 }
 
-.imgholder .upload{
-    position: absolute;
-    bottom: 0;
-    left: 10;
-    width: 100%;
-    height: 100px;
-    background: rgba(0,0,0,0.3);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+/* Section styles */
+section {
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.upload i{
-    color: #fff;
-    font-size: 35px;
+/* Button styles */
+.btn {
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-.imgholder:hover .upload{
-    display: flex;
-}
-
-.imgholder .upload input{
-    display: none;
-}
-
-.modal-body form .inputField{
-    flex-basis: 68%;
-    border-left: 5px groove blue;
-    padding-left: 20px;
-}
-
-form .inputField > div{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-form .inputField > div label{
-    font-size: 20px;
-    font-weight: 500;
-}
-
-#userForm form .inputField > div label::after{
-    content: "*";
-    color: red;
-}
-
-form .inputField > div input{
-    width: 75%;
-    padding: 10px;
+.btn-primary {
+    background-color: #007bff;
     border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-success {
+    background-color: #28a745;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* Table styles */
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.table th, .table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #dee2e6;
+}
+
+.table th {
+    background-color: #007bff;
+    color: white;
+}
+
+.table-striped tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+/* Modal styles */
+.modal-content {
+    border-radius: 8px;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+/* Input styles */
+.inputField div {
+    margin-bottom: 15px;
+}
+
+input[type="text"], input[type="file"] {
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    width: 100%;
+}
+
+/* Search input styles */
+#searchInput {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+#searchInput:focus {
+    border-color: #007bff;
     outline: none;
-    background: transparent;
-    border-bottom: 2px solid blue;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
-.modal-footer .submit{
-    font-size: 18px;
-}
-
-
-#readData form .inputField > div input{
-    color: #000;
-    font-size: 18px;
+/* Responsive styles */
+@media (max-width: 768px) {
+    .table {
+        font-size: 14px;
+    }
 }
