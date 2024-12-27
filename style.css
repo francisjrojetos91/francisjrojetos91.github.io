@@ -7,23 +7,25 @@ body, h1, h2, h3, h4, h5, h6, p {
 /* Body styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
+    background-color: #f0f4f8; /* Fundo mais claro */
     color: #343a40;
 }
 
 /* Section styles */
 section {
-    margin: 20px auto;
+    margin: 30px auto; /* Aumentar a margem */
     max-width: 1200px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px; /* Aumentar o padding */
+    background-color: #ffffff; /* Fundo branco */
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
 }
 
 /* Button styles */
 .btn {
-    border-radius: 5px;
+    border-radius: 25px; /* Bordas arredondadas nos botões */
+    padding: 10px 20px; /* Aumentar padding dos botões */
+    font-weight: bold; /* Negrito */
     transition: background-color 0.3s ease;
 }
 
@@ -54,29 +56,33 @@ section {
 
 /* Table styles */
 .table {
-    border-collapse: collapse;
+    border-collapse: separate; /* Separar as bordas da tabela */
+    border-spacing: 0 15px; /* Espaçamento entre as linhas */
     width: 100%;
     margin-top: 20px;
 }
 
 .table th, .table td {
-    padding: 15px;
+    padding: 20px; /* Aumentar padding das células */
     text-align: center;
     border: 1px solid #dee2e6;
+    border-radius: 10px; /* Bordas arredondadas nas células */
 }
 
 .table th {
     background-color: #007bff;
     color: white;
+    border-top-left-radius: 10px; /* Bordas arredondadas no cabeçalho */
+    border-top-right-radius: 10px; 
 }
 
 .table-striped tbody tr:nth-child(odd) {
-    background-color: #f2f2f2;
+    background-color: #f8f9fa; /* Cor de fundo alternada */
 }
 
 /* Modal styles */
 .modal-content {
-    border-radius: 8px;
+    border-radius: 15px; /* Bordas arredondadas nos modais */
 }
 
 .modal-header {
@@ -85,23 +91,23 @@ section {
 
 /* Input styles */
 .inputField div {
-    margin-bottom: 15px;
+    margin-bottom: 20px; /* Aumentar separação entre os inputs */
 }
 
 input[type="text"], input[type="file"] {
-    padding: 10px;
+    padding: 15px; /* Aumentar padding dos inputs */
     border: 1px solid #ced4da;
-    border-radius: 5px;
+    border-radius: 10px; /* Bordas arredondadas nos inputs */
     width: 100%;
 }
 
 /* Search input styles */
 #searchInput {
     width: 100%;
-    margin-bottom: 15px;
-    padding: 10px;
+    margin-bottom: 20px; /* Aumentar margem inferior */
+    padding: 15px; /* Aumentar padding do campo de busca */
     border: 1px solid #ced4da;
-    border-radius: 5px;
+    border-radius: 10px; /* Bordas arredondadas */
     transition: border-color 0.3s;
 }
 
